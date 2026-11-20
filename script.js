@@ -1,11 +1,17 @@
 function openTelegramLink(event, username) {
+    event.preventDefault();
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
     if (isMobile) {
-        event.preventDefault();
         window.location.href = `tg://resolve?domain=${username}`;
+
         setTimeout(() => {
-            window.open(`https://t.me{username}`, '_blank', 'noopener,noreferrer');
-        }, 600);
+            if (!document.hidden) {
+                window.location.href = `https://telegram.me{username}`;
+            }
+        }, 1200);
+    } else {
+        window.open(`https://telegram.me{username}`, '_blank', 'noopener,noreferrer');
     }
 }
 
