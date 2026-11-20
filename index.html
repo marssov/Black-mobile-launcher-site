@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK MOBILE — Криминальная Россия в твоём телефоне</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Навигация -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-badge">B</div>
+                <span>BLACK <b>MOBILE</b></span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#servers">Серверы</a>
+                <a href="#features">Возможности</a>
+                <a href="#gallery">Скриншоты</a>
+                <a href="#start">Как начать</a>
+                <a href="#community">Сообщество</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://t.me" target="_blank" rel="noopener noreferrer" onclick="openTelegramLink(event, 'Panel_BlackMobile_bot')" class="btn-donate-small">
+                    Донат
+                </a>
+                <button class="burger" id="burger-btn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section class="hero">
+        <div class="hero-art-wrapper">
+            <img src="image_dbd7645e (1).jpg" alt="BLACK MOBILE" class="hero-art-img">
+            <div class="hero-art-gradient"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-left">
+                <div class="hero-kicker">ДОБРО ПОЖАЛОВАТЬ —</div>
+
+                <h1 class="hero-title">
+                    BLACK<br>
+                    <span class="gradient-text">MOBILE</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Отправляйся в мир безграничных возможностей. Здесь ты можешь стать кем угодно — от уличного гонщика до владельца империи, прямо со своего телефона.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="ЗДЕСЬ ССЫЛКА РЕЛИЗ ДЛЯ СКАЧИВАНИЯ" class="btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        <span>СКАЧАТЬ ИГРУ</span>
+                    </a>
+                    <a href="#servers" class="btn-secondary">
+                        СПИСОК СЕРВЕРОВ
+                    </a>
+                </div>
+
+                <!-- Счётчик онлайн -->
+                <div class="online-counter">
+                    <div class="online-top">
+                        <span class="pulse-dot"></span>
+                        <span class="online-num" id="online-count">148</span>
+                    </div>
+                    <div class="online-label">ИГРОКОВ ОНЛАЙН</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Мониторинг серверов -->
+    <section id="servers" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">● МОНИТОРИНГ</span>
+                <h2>Выбери свой <span class="gradient-text">сервер</span></h2>
+            </div>
+
+            <div class="servers-grid">
+                <div class="server-card card-crimson">
+                    <div class="server-top">
+                        <span class="server-num">SERVER #01</span>
+                        <span class="server-status online">● ОНЛАЙН</span>
+                    </div>
+                    <h3 class="server-name">CHILLI</h3>
+                    <p class="server-desc">Зимний сезон • Бонус Х2 по выходным</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 74%;"></div>
+                    </div>
+                    <a href="ЗДЕСЬ ССЫЛКА РЕЛИЗ ДЛЯ СКАЧИВАНИЯ" class="server-action">
+                        ПОДКЛЮЧИТЬСЯ ЧЕРЕЗ ЛАУНЧЕР →
+                    </a>
+                </div>
+
+                <div class="server-card card-violet">
+                    <div class="server-top">
+                        <span class="server-num">SERVER #02</span>
+                        <span class="server-status soon">● СКОРО ОТКРЫТИЕ</span>
+                    </div>
+                    <h3 class="server-name">MOSCOW</h3>
+                    <p class="server-desc">Следи за датой открытия в Telegram-канале</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; opacity: 0.25;"></div>
+                    </div>
+                    <a href="https://t.me" target="_blank" rel="noopener noreferrer" onclick="openTelegramLink(event, 'Black_Mobilez')" class="server-action">
+                        ПЕРЕЙТИ В TELEGRAM →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Особенности игры -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">● ИГРОВОЙ МИР</span>
+                <h2>Что ждёт тебя в <span class="gradient-text">BLACK MOBILE</span></h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card bento-large" style="background-image: linear-gradient(to top, #07070b 15%, rgba(7,7,11,0.25) 100%), url('IMG_20261120_143526_115.jpg');">
+                    <div class="bento-badge">РЕАЛИСТИЧНЫЙ АВТОПАРК</div>
+                    <h3>От классики до спорткаров</h3>
+                    <p>Детальный тюнинг, уникальные номера, реалистичный спидометр и зимняя физика дорог.</p>
+                </div>
+
+                <div class="bento-card" style="background-image: linear-gradient(to top, #07070b 15%, rgba(7,7,11,0.3) 100%), url('IMG_20261120_143526_449.jpg');">
+                    <div class="bento-badge">BLACK PASS И КЕЙСЫ</div>
+                    <h3>Сезонные награды</h3>
+                    <p>Выполняй задания Дела №5, открывай кейсы, забирай VIP-статусы, валюту и редкие авто.</p>
+                </div>
+
+                <div class="bento-card" style="background-image: linear-gradient(to top, #07070b 15%, rgba(7,7,11,0.3) 100%), url('IMG_20261120_143525_862.jpg');">
+                    <div class="bento-badge">ЗИМНИЙ ИВЕНТ</div>
+                    <h3>Праздничная атмосфера</h3>
+                    <p>Заснеженная карта, тематические локации, мини-игры и новогодние подарки для каждого игрока.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея живых скриншотов из игры -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">● ГЕЙМПЛЕЙ</span>
+                <h2>Кадры из <span class="gradient-text">игры</span></h2>
+                <p class="section-sub">Нажми на любой скриншот, чтобы открыть его в полном размере.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <img src="IMG_20261120_143526_115.jpg" alt="Автопарк Black Mobile" class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="IMG_20261120_143526_449.jpg" alt="Black Pass" class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="IMG_20261120_143525_862.jpg" alt="Зимняя локация" class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="IMG_20261120_143526_551.jpg" alt="Город Black Mobile" class="gallery-img" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Шаги запуска -->
+    <section id="start" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">● БЫСТРЫЙ СТАРТ</span>
+                <h2>Начни играть <span class="gradient-text">за 3 шага</span></h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>Скачай лаунчер</h3>
+                    <p>Нажми кнопку ниже и установи официальный файл <b>BLACK-MOBILE-2.apk</b> на Android.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>Загрузи файлы игры</h3>
+                    <p>Открой лаунчер и дождись автоматической распаковки кэша.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Зайди на сервер</h3>
+                    <p>Введи ник в формате <b>Имя_Фамилия</b>, выбери сервер <b>CHILLI</b> и начинай путь.</p>
+                </div>
+            </div>
+
+            <div class="download-grid">
+                <a href="ЗДЕСЬ ССЫЛКА РЕЛИЗ ДЛЯ СКАЧИВАНИЯ" class="store-btn store-btn-accent">
+                    <span class="store-icon">⬇</span>
+                    <div class="store-text">
+                        <small>ANDROID • ВЕРСИЯ 1.0 (113 MB)</small>
+                        <strong>Скачать .APK напрямую</strong>
+                    </div>
+                </a>
+
+                <a href="https://t.me" target="_blank" rel="noopener noreferrer" onclick="openTelegramLink(event, 'Panel_BlackMobile_bot')" class="store-btn">
+                    <span class="store-icon">💎</span>
+                    <div class="store-text">
+                        <small>ОФИЦИАЛЬНЫЙ БОТ В TELEGRAM</small>
+                        <strong>Пополнить счёт / Донат</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сообщество -->
+    <section id="community" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">● СООБЩЕСТВО</span>
+                <h2>Будь на связи с <span class="gradient-text">проектом</span></h2>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://t.me" target="_blank" rel="noopener noreferrer" onclick="openTelegramLink(event, 'Black_Mobilez')" class="social-card">
+                    <div class="social-icon tg">TG</div>
+                    <div class="social-info">
+                        <h3>Telegram-канал @Black_Mobilez</h3>
+                        <p>Новости обновлений, промокоды, розыгрыши и общение с игроками.</p>
+                    </div>
+                    <span class="social-arrow">↗</span>
+                </a>
+
+                <a href="https://t.me" target="_blank" rel="noopener noreferrer" onclick="openTelegramLink(event, 'Panel_BlackMobile_bot')" class="social-card">
+                    <div class="social-icon donate">BC</div>
+                    <div class="social-info">
+                        <h3>Донат-бот @Panel_BlackMobile_bot</h3>
+                        <p>Мгновенное пополнение баланса, покупка VIP и наборов в игре.</p>
+                    </div>
+                    <span class="social-arrow">↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-badge">B</div>
+                    <span>BLACK <b>MOBILE</b></span>
+                </div>
+                <p>© 2026 BLACK MOBILE. Все права защищены. Проект не связан с Rockstar Games или Take-Two Interactive.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://t.me" target="_blank" rel="noopener noreferrer" onclick="openTelegramLink(event, 'Black_Mobilez')" class="support-fab" title="Наш Telegram">
+        TG
+    </a>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Просмотр скриншота">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
